@@ -1,5 +1,6 @@
 import { log } from "../../../love/public/src/log.mjs";
 import { test, expect } from "@playwright/test";
+import { chromium } from "playwright";
 export async function sandbox_test() {
   const browser = await chromium.launch();
   const page = await browser.newPage();
