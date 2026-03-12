@@ -1,0 +1,13 @@
+QA strategy
+
+Testing pyramid
+
+Test environments
+
+Test data strategy
+
+Bug workflow
+
+Release quality gates
+
+TODO
