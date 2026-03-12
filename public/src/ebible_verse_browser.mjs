@@ -8,16 +8,10 @@ export async function ebible_verse_browser(
   chapter_code,
   verse_number,
 ) {
-  let b = browser_is();
-  if (b) {
     let verse_get = global_function_initialize(
       ebible_verse_browser,
       ebible_verse_download,
     );
     let verse = await verse_get(bible_folder, chapter_code, verse_number);
     return verse;
-  }
-  let verses = await ebible_verses(bible_folder, chapter_code);
-  let result = list_find_property(verses, "verse_number", verse_number);
-  return result;
 }
