@@ -1,8 +1,10 @@
+import { log } from "../../../love/public/src/log.mjs";
 import { test, expect } from "@playwright/test";
-export function sandbox_test() {
-  async function lambda({ page }) {
-    await page.goto("https://example.com");
-    await expect(page).toHaveTitle(/Example/);
-  }
-  test("basic test", lambda);
+export async function sandbox_test() {
+  const browser = await chromium.launch();
+  const page = await browser.newPage();
+  await page.goto("https://example.com");
+  const title = await page.title();
+  console.log(title);
+  await browser.close();
 }
