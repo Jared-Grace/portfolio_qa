@@ -1,8 +1,5 @@
 import { global_function_initialize } from "../../../love/public/src/global_function_initialize.mjs";
 import { ebible_verse_download } from "../../../love/public/src/ebible_verse_download.mjs";
-import { browser_is } from "../../../love/public/src/browser_is.mjs";
-import { list_find_property } from "../../../love/public/src/list_find_property.mjs";
-import { ebible_verses } from "../../../love/public/src/ebible_verses.mjs";
 export async function ebible_verse_browser(
   bible_folder,
   chapter_code,
