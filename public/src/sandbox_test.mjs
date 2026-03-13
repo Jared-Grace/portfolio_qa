@@ -11,8 +11,8 @@ export async function sandbox_test() {
   const page = await browser.newPage();
   await page.goto("https://www.saucedemo.com/");
   const title = await page.title();
-  equal_assert(left, right);
   console.log(title);
+  equal_assert(title, right);
   await playwright_by_attribute_type(
     page,
     "data-test",
