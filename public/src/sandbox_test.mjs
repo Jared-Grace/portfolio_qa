@@ -10,6 +10,7 @@ export async function sandbox_test() {
   const page = await browser.newPage();
   await page.goto("https://www.saucedemo.com/");
   const title = await page.title();
+  ("this assert is a smoke test");
   equal_assert(title, "Swag Labs");
   await playwright_by_attribute_type(
     page,
