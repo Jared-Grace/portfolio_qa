@@ -6,5 +6,6 @@ export async function sandbox_test() {
   await page.goto("https://www.saucedemo.com/");
   const title = await page.title();
   console.log(title);
+  page.locator('[data-test="username"]');
   await browser.close();
 }
