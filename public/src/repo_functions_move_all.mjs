@@ -1,6 +1,6 @@
+import { user_repo_get_functions_names } from "../../../portfolio_qa/public/src/user_repo_get_functions_names.mjs";
 import { repo_functions_move_acronym } from "../../../portfolio_qa/public/src/repo_functions_move_acronym.mjs";
-import { repo_functions_move_if_includes_not_filtered } from "../../../love/public/src/repo_functions_move_if_includes_not_filtered.mjs";
 export async function repo_functions_move_all(to, query) {
-  let filtered = await repo_functions_move_if_includes_not_filtered(query);
+  let filtered = await user_repo_get_functions_names();
   await repo_functions_move_acronym(to, filtered);
 }
