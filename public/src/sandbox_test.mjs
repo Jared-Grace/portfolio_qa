@@ -2,7 +2,9 @@ import { sleep } from "../../../love/public/src/sleep.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { chromium } from "playwright";
 export async function sandbox_test() {
-  const browser = await chromium.launch();
+  const browser = await chromium.launch({
+    headless: false,
+  });
   const page = await browser.newPage();
   await page.goto("https://www.saucedemo.com/");
   const title = await page.title();
