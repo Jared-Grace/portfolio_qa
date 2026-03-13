@@ -1,3 +1,4 @@
+import { sleep } from "../../../love/public/src/sleep.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { chromium } from "playwright";
 export async function sandbox_test() {
@@ -9,5 +10,6 @@ export async function sandbox_test() {
   await page.locator('[data-test="username"]').fill("standard_user");
   await page.locator('[data-test="password"]').fill("secret_sauce");
   await page.locator('[data-test="login-button"]').click();
+  await sleep(ms);
   await browser.close();
 }
