@@ -1,4 +1,4 @@
-import { playwright_by_attribute } from "../../../portfolio_qa/public/src/playwright_by_attribute.mjs";
+import { playwright_by_attribute_typed } from "../../../portfolio_qa/public/src/playwright_by_attribute_typed.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { chromium } from "playwright";
@@ -13,7 +13,7 @@ export async function sandbox_test() {
   console.log(title);
   const name = "data-test";
   const value = "username";
-  await playwright_by_attribute(page, name, value).type(typed);
+  await playwright_by_attribute_typed(page, name, value);
   await page.locator('[data-test="password"]').type("secret_sauce");
   await page.locator('[data-test="login-button"]').click();
   await sleep(10000);
