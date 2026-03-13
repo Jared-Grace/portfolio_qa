@@ -1,3 +1,4 @@
+import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { playwright_by_attribute } from "../../../portfolio_qa/public/src/playwright_by_attribute.mjs";
 import { playwright_by_attribute_type } from "../../../portfolio_qa/public/src/playwright_by_attribute_type.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
@@ -10,6 +11,7 @@ export async function sandbox_test() {
   const page = await browser.newPage();
   await page.goto("https://www.saucedemo.com/");
   const title = await page.title();
+  equal_assert(left, right);
   console.log(title);
   await playwright_by_attribute_type(
     page,
