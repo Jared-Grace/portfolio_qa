@@ -10,6 +10,6 @@ export async function sandbox_test() {
   await page.locator('[data-test="username"]').fill("standard_user");
   await page.locator('[data-test="password"]').fill("secret_sauce");
   await page.locator('[data-test="login-button"]').click();
-  await sleep(ms);
+  await sleep(10000);
   await browser.close();
 }
