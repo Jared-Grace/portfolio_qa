@@ -2,6 +2,7 @@ import { playwright_by_attribute } from "../../../portfolio_qa/public/src/playwr
 import { sleep } from "../../../love/public/src/sleep.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { chromium } from "playwright";
+const typed = "standard_user";
 export async function sandbox_test() {
   const browser = await chromium.launch({
     headless: false,
@@ -10,9 +11,7 @@ export async function sandbox_test() {
   await page.goto("https://www.saucedemo.com/");
   const title = await page.title();
   console.log(title);
-  await playwright_by_attribute(page, "data-test", "username").type(
-    "standard_user",
-  );
+  await playwright_by_attribute(page, "data-test", "username").type(typed);
   await page.locator('[data-test="password"]').type("secret_sauce");
   await page.locator('[data-test="login-button"]').click();
   await sleep(10000);
