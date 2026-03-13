@@ -16,7 +16,12 @@ export async function sandbox_test() {
     "username",
     "standard_user",
   );
-  await page.locator('[data-test="password"]').type("secret_sauce");
+  await playwright_by_attribute_type(
+    page,
+    "data-test",
+    "password",
+    "secret_sauce",
+  );
   await page.locator('[data-test="login-button"]').click();
   await sleep(10000);
   await browser.close();
