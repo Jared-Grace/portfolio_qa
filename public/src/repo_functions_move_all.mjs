@@ -1,6 +1,6 @@
 import { user_repo_get_functions_names } from "../../../portfolio_qa/public/src/user_repo_get_functions_names.mjs";
 import { repo_functions_move_acronym } from "../../../portfolio_qa/public/src/repo_functions_move_acronym.mjs";
-export async function repo_functions_move_all(to, query) {
+export async function repo_functions_move_all(to) {
   let filtered = await user_repo_get_functions_names();
   await repo_functions_move_acronym(to, filtered);
 }
