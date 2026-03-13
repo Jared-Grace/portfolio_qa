@@ -2,7 +2,6 @@ import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { playwright_by_attribute } from "../../../portfolio_qa/public/src/playwright_by_attribute.mjs";
 import { playwright_by_attribute_type } from "../../../portfolio_qa/public/src/playwright_by_attribute_type.mjs";
 import { sleep } from "../../../love/public/src/sleep.mjs";
-import { log } from "../../../love/public/src/log.mjs";
 import { chromium } from "playwright";
 export async function sandbox_test() {
   const browser = await chromium.launch({
@@ -11,8 +10,7 @@ export async function sandbox_test() {
   const page = await browser.newPage();
   await page.goto("https://www.saucedemo.com/");
   const title = await page.title();
-  console.log(title);
-  equal_assert(title, right);
+  equal_assert(title, "Swag Labs");
   await playwright_by_attribute_type(
     page,
     "data-test",
