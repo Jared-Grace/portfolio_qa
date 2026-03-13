@@ -10,10 +10,12 @@ export async function sandbox_test() {
   await page.goto("https://www.saucedemo.com/");
   const title = await page.title();
   console.log(title);
-  const name = "data-test";
-  const value = "username";
-  const typed = "standard_user";
-  await playwright_by_attribute_type(page, name, value, typed);
+  await playwright_by_attribute_type(
+    page,
+    "data-test",
+    "username",
+    "standard_user",
+  );
   await page.locator('[data-test="password"]').type("secret_sauce");
   await page.locator('[data-test="login-button"]').click();
   await sleep(10000);
