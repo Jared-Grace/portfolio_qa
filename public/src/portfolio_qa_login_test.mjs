@@ -17,6 +17,8 @@ export async function portfolio_qa_login_test() {
       let r = {
         count: c,
         exists: e,
+        name,
+        value,
       };
       return r;
     }
