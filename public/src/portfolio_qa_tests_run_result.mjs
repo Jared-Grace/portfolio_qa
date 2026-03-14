@@ -13,8 +13,8 @@ export function portfolio_qa_tests_run_result(tests, errors) {
   let p = word_count_pluralize(count_errors, "error");
   let combined = text_combine_multiple([p, " when ", v, " were ran"]);
   let combined2 = text_combine_multiple([
-    count_total,
-    " test(s) ran successfully with no errors",
+    v,
+    " ran successfully with no errors",
   ]);
   let message = ternary(count_errors === 0, combined2, combined);
   let r3 = {
