@@ -5,9 +5,8 @@ import { portfolio_qa_test_generic } from "../../../portfolio_qa/public/src/port
 export async function portfolio_qa_login_password_missing_test() {
   async function lambda(page) {
     await portfolio_qa_username_valid(page);
-    await portfolio_qa_login_click(page);$a
-    const name_field = "Username";
-    await portfolio_qa_error_message(page, name_field);
+    await portfolio_qa_login_click(page);
+    await portfolio_qa_error_message(page, "Username");
   }
   await portfolio_qa_test_generic(lambda);
 }
