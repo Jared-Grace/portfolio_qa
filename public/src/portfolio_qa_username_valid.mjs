@@ -4,6 +4,6 @@ export async function portfolio_qa_username_valid(page) {
     page,
     "data-test",
     "username",
-    "standard_user",
+    "standard_use2r",
   );
 }
