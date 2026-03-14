@@ -14,7 +14,6 @@ export async function portfolio_qa_login_username_missing_test() {
     log(portfolio_qa_login_username_missing_test.name, {
       t,
     });
-    await sleep(99999);
   }
   await portfolio_qa_test_generic(lambda);
 }
