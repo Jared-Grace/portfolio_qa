@@ -10,5 +10,5 @@ export async function playwright_by_attribute_exists_assert(page, name, value) {
     };
     return r;
   }
-  assert_json_get(b, lambda3);
+  assert_json_get(e, lambda3);
 }
