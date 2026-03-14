@@ -9,6 +9,7 @@ export async function portfolio_qa_login_username_missing_test() {
     const name = "data-test";
     const value = "error";
     let t = await playwright_by_attribute_text(page, name, value);
+    eat;
     log(portfolio_qa_login_username_missing_test.name, {
       t,
     });
