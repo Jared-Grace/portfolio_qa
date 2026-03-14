@@ -6,11 +6,9 @@ import { portfolio_qa_test_generic } from "../../../portfolio_qa/public/src/port
 export async function portfolio_qa_login_username_missing_test() {
   async function lambda(page) {
     await portfolio_qa_login_click(page);
-    let t = await playwright_by_attribute(
-      page,
-      "data-test",
-      "error",
-    ).textContent();
+    const name = "data-test";
+    const value = "error";
+    let t = await playwright_by_attribute(page, name, value).textContent();
     log(portfolio_qa_login_username_missing_test.name, {
       t,
     });
