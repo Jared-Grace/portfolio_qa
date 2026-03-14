@@ -1,3 +1,4 @@
+import { assert_json_get } from "../../../love/public/src/assert_json_get.mjs";
 import { greater_than_or_equal } from "../../../love/public/src/greater_than_or_equal.mjs";
 import { playwright_by_attribute_count } from "../../../portfolio_qa/public/src/playwright_by_attribute_count.mjs";
 import { sleep_long } from "../../../portfolio_qa/public/src/sleep_long.mjs";
@@ -12,6 +13,8 @@ export async function portfolio_qa_login_test() {
     let value = "login-container";
     let c = playwright_by_attribute_count(page, name, value);
     let g = greater_than_or_equal(c, 1);
+    function lambda3() {}
+    assert_json_get(b, lambda3);
     await portfolio_qa_username_valid(page);
     await playwright_by_attribute_type(
       page,
