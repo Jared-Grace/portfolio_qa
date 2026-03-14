@@ -4,7 +4,7 @@ import { portfolio_qa_username_valid_password_login } from "../../../portfolio_q
 import { portfolio_qa_test_generic } from "../../../portfolio_qa/public/src/portfolio_qa_test_generic.mjs";
 export async function portfolio_qa_login_password_invalid_test() {
   async function lambda(page) {
-    const invalid = "secret_sauce";
+    const invalid = "invalid";
     await portfolio_qa_username_valid_password_login(page, invalid);
     let actual = await portfolio_qa_error_text(page);
     log(portfolio_qa_login_password_invalid_test.name, {
