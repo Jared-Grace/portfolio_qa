@@ -1,6 +1,6 @@
 import { ternary } from "../../../love/public/src/ternary.mjs";
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
-import { word_count_pluralize } from "../../../karate_code/public/src/word_count_pluralize.mjs";
+import { word_count_pluralize } from "../../../love/public/src/word_count_pluralize.mjs";
 import { subtract } from "../../../love/public/src/subtract.mjs";
 import { list_map_property } from "../../../love/public/src/list_map_property.mjs";
 import { list_size } from "../../../love/public/src/list_size.mjs";
