@@ -5,8 +5,8 @@ import { portfolio_qa_test_generic } from "../../../portfolio_qa/public/src/port
 export async function portfolio_qa_login_test() {
   await portfolio_qa_test_generic(lambda2);
   async function lambda2(page) {
-    const password = "secret_sauce";
     await portfolio_qa_exists_assert(page, "login-container");
+    const password = "secret_sauce";
     await portfolio_qa_username_valid_password_login(page, password);
     await portfolio_qa_exists_not_assert(page, "login-container");
     await portfolio_qa_exists_assert(page, "inventory-container");
