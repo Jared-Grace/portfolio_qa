@@ -15,7 +15,6 @@ export async function portfolio_qa_login_test() {
     let e = greater_than_or_equal(c, 1);
     function lambda3() {
       let r = {
-        count: c,
         exists: e,
         name,
         value,
