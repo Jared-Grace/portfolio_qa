@@ -4,5 +4,6 @@ export async function playwright_by_attribute_exists_assert_not(
   name,
   value,
 ) {
-  return await playwright_by_attribute_exists_assert(page, name, value);
+  let r = await playwright_by_attribute_exists_assert(page, name, value);
+  return r;
 }
