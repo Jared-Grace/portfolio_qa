@@ -6,7 +6,7 @@ import { portfolio_qa_test_generic } from "../../../portfolio_qa/public/src/port
 export async function portfolio_qa_login_username_invalid_test() {
   async function lambda(page) {
     const invalid = "invalid";
-    await portfolio_qa_username(page, value);
+    await portfolio_qa_username(page, "invalid");
     await portfolio_qa_by_attribute_type(page, "password", invalid);
     await portfolio_qa_login_click(page);
     await portfolio_qa_error_username_password_invalid(page);
