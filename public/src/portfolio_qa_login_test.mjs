@@ -18,6 +18,11 @@ export async function portfolio_qa_login_test() {
       "secret_sauce",
     );
     await portfolio_qa_login_click(page);
+    await playwright_by_attribute_exists_assert(
+      page,
+      name,
+      "inventory-container",
+    );
     await sleep_long();
   }
 }
