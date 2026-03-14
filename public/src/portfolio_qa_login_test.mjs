@@ -9,7 +9,7 @@ export async function portfolio_qa_login_test() {
   async function lambda2(page) {
     let name = "data-test";
     let value = "login-container";
-    playwright_by_attribute(page, name, value);
+    playwright_by_attribute(page, name, value).count();
     await portfolio_qa_username_valid(page);
     await playwright_by_attribute_type(
       page,
