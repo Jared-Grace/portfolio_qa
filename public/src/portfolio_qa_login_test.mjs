@@ -14,6 +14,6 @@ export async function portfolio_qa_login_test() {
       "secret_sauce",
     );
     await portfolio_qa_login_click(page);
-    let r = await sleep_long();
+    await sleep_long();
   }
 }
