@@ -7,7 +7,7 @@ export async function portfolio_qa_login_password_invalid_test() {
     await portfolio_qa_username_valid_password_login(page, invalid);
     await portfolio_qa_error_message_assert(
       page,
-      "Username and password do not match any user in this srvice",
+      "Username and password do not match any user in this service",
     );
   }
   await portfolio_qa_test_generic(lambda);
