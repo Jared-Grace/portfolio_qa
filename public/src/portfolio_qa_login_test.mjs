@@ -1,3 +1,4 @@
+import { playwright_by_attribute } from "../../../love/public/src/playwright_by_attribute.mjs";
 import { sleep_long } from "../../../portfolio_qa/public/src/sleep_long.mjs";
 import { portfolio_qa_username_valid } from "../../../portfolio_qa/public/src/portfolio_qa_username_valid.mjs";
 import { portfolio_qa_login_click } from "../../../portfolio_qa/public/src/portfolio_qa_login_click.mjs";
@@ -6,7 +7,9 @@ import { portfolio_qa_test_generic } from "../../../portfolio_qa/public/src/port
 export async function portfolio_qa_login_test() {
   await portfolio_qa_test_generic(lambda2);
   async function lambda2(page) {
-    'data-test="login-container"';
+    let name = "data-test";
+    ('data-test="login-container"');
+    playwright_by_attribute(page, name, value);
     await portfolio_qa_username_valid(page);
     await playwright_by_attribute_type(
       page,
