@@ -6,6 +6,7 @@ import { portfolio_qa_test_generic } from "../../../portfolio_qa/public/src/port
 export async function portfolio_qa_login_test() {
   await portfolio_qa_test_generic(lambda2);
   async function lambda2(page) {
+    'data-test="login-container"';
     await portfolio_qa_username_valid(page);
     await playwright_by_attribute_type(
       page,
