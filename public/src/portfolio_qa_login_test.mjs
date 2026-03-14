@@ -12,9 +12,12 @@ export async function portfolio_qa_login_test() {
     let name = "data-test";
     let value = "login-container";
     let c = playwright_by_attribute_count(page, name, value);
-    let g = greater_than_or_equal(c, 1);
+    let e = greater_than_or_equal(c, 1);
     function lambda3() {
-      let r = {};
+      let r = {
+        count: c,
+        exists: e,
+      };
       return r;
     }
     assert_json_get(b, lambda3);
