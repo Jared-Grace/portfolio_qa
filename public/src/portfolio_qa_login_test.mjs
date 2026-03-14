@@ -1,5 +1,5 @@
 import { portfolio_qa_container_exists_not_assert } from "../../../portfolio_qa/public/src/portfolio_qa_container_exists_not_assert.mjs";
-import { portfolio_qa_container_exists_assert } from "../../../portfolio_qa/public/src/portfolio_qa_container_exists_assert.mjs";
+import { portfolio_qa_exists_assert } from "../../../portfolio_qa/public/src/portfolio_qa_exists_assert.mjs";
 import { sleep_long } from "../../../portfolio_qa/public/src/sleep_long.mjs";
 import { portfolio_qa_username_valid } from "../../../portfolio_qa/public/src/portfolio_qa_username_valid.mjs";
 import { portfolio_qa_login_click } from "../../../portfolio_qa/public/src/portfolio_qa_login_click.mjs";
@@ -8,7 +8,7 @@ import { portfolio_qa_test_generic } from "../../../portfolio_qa/public/src/port
 export async function portfolio_qa_login_test() {
   await portfolio_qa_test_generic(lambda2);
   async function lambda2(page) {
-    await portfolio_qa_container_exists_assert(page, "login-container");
+    await portfolio_qa_exists_assert(page, "login-container");
     await portfolio_qa_username_valid(page);
     await playwright_by_attribute_type(
       page,
@@ -18,7 +18,7 @@ export async function portfolio_qa_login_test() {
     );
     await portfolio_qa_login_click(page);
     await portfolio_qa_container_exists_not_assert(page, "login-container");
-    await portfolio_qa_container_exists_assert(page, "inventory-container");
+    await portfolio_qa_exists_assert(page, "inventory-container");
     await sleep_long();
   }
 }
