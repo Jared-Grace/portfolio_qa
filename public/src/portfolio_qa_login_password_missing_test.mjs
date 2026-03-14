@@ -7,9 +7,9 @@ export async function portfolio_qa_login_password_missing_test() {
   async function lambda(page) {
     await portfolio_qa_username_valid(page);
     await portfolio_qa_login_click(page);
+    const name_field = "Username";
     const name = "data-test";
     const value = "error";
-    const name_field = "Username";
     let actual = await playwright_by_attribute_text(page, name, value);
     equal_assert(actual, "Epic sadface: " + name_field + " is required");
   }
