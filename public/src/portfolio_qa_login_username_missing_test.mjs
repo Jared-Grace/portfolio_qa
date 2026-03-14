@@ -1,3 +1,4 @@
+import { equal_assert } from "../../../love/public/src/equal_assert.mjs";
 import { playwright_by_attribute_text } from "../../../portfolio_qa/public/src/playwright_by_attribute_text.mjs";
 import { log } from "../../../love/public/src/log.mjs";
 import { portfolio_qa_login_click } from "../../../portfolio_qa/public/src/portfolio_qa_login_click.mjs";
@@ -9,7 +10,7 @@ export async function portfolio_qa_login_username_missing_test() {
     const name = "data-test";
     const value = "error";
     let t = await playwright_by_attribute_text(page, name, value);
-    eat;
+    equal_assert(left, right);
     log(portfolio_qa_login_username_missing_test.name, {
       t,
     });
