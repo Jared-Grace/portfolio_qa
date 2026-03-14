@@ -7,9 +7,8 @@ import { portfolio_qa_test_generic } from "../../../portfolio_qa/public/src/port
 export async function portfolio_qa_login_test() {
   await portfolio_qa_test_generic(lambda2);
   async function lambda2(page) {
-    let name = "data-test";
     let value = "login-container";
-    await playwright_by_attribute_exists_assert(page, name, value);
+    await playwright_by_attribute_exists_assert(page, "data-test", value);
     await portfolio_qa_username_valid(page);
     await playwright_by_attribute_type(
       page,
@@ -20,7 +19,7 @@ export async function portfolio_qa_login_test() {
     await portfolio_qa_login_click(page);
     await playwright_by_attribute_exists_assert(
       page,
-      name,
+      "data-test",
       "inventory-container",
     );
     await sleep_long();
