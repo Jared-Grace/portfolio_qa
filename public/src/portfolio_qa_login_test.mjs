@@ -9,12 +9,8 @@ export async function portfolio_qa_login_test() {
   async function lambda2(page) {
     await portfolio_qa_exists_assert(page, "login-container");
     await portfolio_qa_username_valid(page);
-    await playwright_by_attribute_type(
-      page,
-      "data-test",
-      "password",
-      "secret_sauce",
-    );
+    const password = "secret_sauce";
+    await playwright_by_attribute_type(page, "data-test", "password", password);
     await portfolio_qa_login_click(page);
     await portfolio_qa_exists_not_assert(page, "login-container");
     await portfolio_qa_exists_assert(page, "inventory-container");
