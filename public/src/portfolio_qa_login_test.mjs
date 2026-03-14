@@ -13,7 +13,9 @@ export async function portfolio_qa_login_test() {
     let value = "login-container";
     let c = playwright_by_attribute_count(page, name, value);
     let g = greater_than_or_equal(c, 1);
-    function lambda3() {}
+    function lambda3() {
+      return {};
+    }
     assert_json_get(b, lambda3);
     await portfolio_qa_username_valid(page);
     await playwright_by_attribute_type(
