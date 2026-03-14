@@ -8,7 +8,7 @@ export async function portfolio_qa_login_username_missing_test() {
     await portfolio_qa_login_click(page);
     let t = await playwright_by_attribute(
       page,
-      "data-error",
+      "data-test",
       "error",
     ).textContent();
     log(portfolio_qa_login_username_missing_test.name, {
