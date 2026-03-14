@@ -7,7 +7,6 @@ export async function playwright_by_attribute_exists_not_assert(
   value,
 ) {
   let e = await playwright_by_attribute_exists(page, name, value);
-  playwright_by_attribute_exists_assert_assertion(e, name, value);
-  let n = not(r);
-  return n;
+  let n = not(e);
+  playwright_by_attribute_exists_assert_assertion(n, name, value);
 }
