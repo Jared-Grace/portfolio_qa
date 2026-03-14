@@ -8,7 +8,7 @@ export async function portfolio_qa_login_test() {
   await portfolio_qa_test_generic(lambda2);
   async function lambda2(page) {
     let name = "data-test";
-    ('data-test="login-container"');
+    let value = "login-container"('data-test="login-container"');
     playwright_by_attribute(page, name, value);
     await portfolio_qa_username_valid(page);
     await playwright_by_attribute_type(
