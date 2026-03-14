@@ -9,8 +9,8 @@ export async function portfolio_qa_login_username_missing_test() {
     await portfolio_qa_login_click(page);
     const name = "data-test";
     const value = "error";
-    let t = await playwright_by_attribute_text(page, name, value);
-    equal_assert(left, right);
+    let actual = await playwright_by_attribute_text(page, name, value);
+    equal_assert(actual, "Epic sadface: Username is required");
     log(portfolio_qa_login_username_missing_test.name, {
       t,
     });
