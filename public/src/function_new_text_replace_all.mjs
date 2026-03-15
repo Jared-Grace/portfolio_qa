@@ -6,7 +6,7 @@ export async function function_new_text_replace_all(text, f_name) {
   async function lambda(ast) {
     let r = js_flo_body_add_return(ast);
     let e = js_expression_string(text);
-    js_return_argument_set(r2, e);
+    js_return_argument_set(r, e);
   }
   let output = await function_new_transform(f_name, lambda);
 }
