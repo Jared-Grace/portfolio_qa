@@ -1,4 +1,4 @@
-import { playwright_by_attribute } from "../../../love/public/src/playwright_by_attribute.mjs";
+import { playwright_by_attribute_named } from "../../../portfolio_qa/public/src/playwright_by_attribute_named.mjs";
 import { portfolio_qa_username } from "../../../portfolio_qa/public/src/portfolio_qa_username.mjs";
 import { portfolio_qa_login_click } from "../../../portfolio_qa/public/src/portfolio_qa_login_click.mjs";
 import { portfolio_qa_password_type } from "../../../portfolio_qa/public/src/portfolio_qa_password_type.mjs";
@@ -11,7 +11,7 @@ export async function portfolio_qa_login_locked_test() {
     await portfolio_qa_username(page, value);
     await portfolio_qa_password_type(page, password);
     await portfolio_qa_login_click(page);
-    let r = playwright_by_attribute(page2, "data-test", value2);
+    let r = playwright_by_attribute_named(page2, "data-test", value2);
   }
   await portfolio_qa_test_generic(lambda);
 }
