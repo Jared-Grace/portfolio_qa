@@ -16,7 +16,9 @@ export async function function_new_text_replace_all(text, f_name) {
   }
   let output = await function_new_transform(f_name, lambda);
   async function lambda2(ast) {
-    let name = js_flo_name(ast2);
+    let name = js_flo_name(ast);
+    if (equal(left, right)) {
+    }
     let nodes = js_list_type_nodes(ast, "Literal");
     function lambda3(literal) {
       let value = js_literal_value_get(literal);
