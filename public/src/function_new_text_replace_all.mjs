@@ -21,8 +21,8 @@ export async function function_new_text_replace_all(text, f_name) {
     function lambda3(literal) {
       let value = js_literal_value_get(literal);
       if (equal(value, text)) {
-        let c = js_call_empty(f_name_new);
-        object_replace(to, from);
+        let c = js_call_empty(f_name);
+        object_replace(value, c);
       }
     }
     each(nodes, lambda3);
