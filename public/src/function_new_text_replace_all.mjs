@@ -1,3 +1,4 @@
+import { js_literal_value_get } from "../../../love/public/src/js_literal_value_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { functions_transform } from "../../../love/public/src/functions_transform.mjs";
 import { js_list_type_nodes } from "../../../love/public/src/js_list_type_nodes.mjs";
@@ -14,7 +15,9 @@ export async function function_new_text_replace_all(text, f_name) {
   let output = await function_new_transform(f_name, lambda);
   async function lambda2(ast) {
     let nodes = js_list_type_nodes(ast, "Literal");
-    function lambda3(item) {}
+    function lambda3(item) {
+      let value = js_literal_value_get(literal);
+    }
     each(list, lambda3);
   }
   let waited = await functions_transform(lambda2);
