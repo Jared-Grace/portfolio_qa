@@ -8,5 +8,5 @@ export async function function_new_text_replace_all(text, f_name) {
     js_flo_body_add_return_argument(ast, e);
   }
   let output = await function_new_transform(f_name, lambda);
-  await function_text_replace_all(f_name, text);
+  await function_text_replace_all(f_name);
 }
