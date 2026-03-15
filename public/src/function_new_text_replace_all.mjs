@@ -11,7 +11,8 @@ export async function function_new_text_replace_all(text, f_name) {
     js_return_argument_set(r, e);
   }
   let output = await function_new_transform(f_name, lambda);
-  async function lambda2(ast3) {}
+  async function lambda2(ast) {
+    let nodes = js_list_type_nodes(ast, node_type);
+  }
   let waited = await functions_transform(lambda2);
-  let nodes = js_list_type_nodes(ast2, node_type);
 }
