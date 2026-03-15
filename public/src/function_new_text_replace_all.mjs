@@ -1,3 +1,4 @@
+import { functions_transform } from "../../../love/public/src/functions_transform.mjs";
 import { js_list_type_nodes } from "../../../love/public/src/js_list_type_nodes.mjs";
 import { js_expression_string } from "../../../love/public/src/js_expression_string.mjs";
 import { js_return_argument_set } from "../../../love/public/src/js_return_argument_set.mjs";
@@ -10,5 +11,7 @@ export async function function_new_text_replace_all(text, f_name) {
     js_return_argument_set(r, e);
   }
   let output = await function_new_transform(f_name, lambda);
+  async function lambda2(ast3) {}
+  let waited = await functions_transform(lambda2);
   let nodes = js_list_type_nodes(ast2, node_type);
 }
