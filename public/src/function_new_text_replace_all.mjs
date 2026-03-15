@@ -1,3 +1,4 @@
+import { equal } from "../../../love/public/src/equal.mjs";
 import { js_literal_value_get } from "../../../love/public/src/js_literal_value_get.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { functions_transform } from "../../../love/public/src/functions_transform.mjs";
@@ -17,6 +18,8 @@ export async function function_new_text_replace_all(text, f_name) {
     let nodes = js_list_type_nodes(ast, "Literal");
     function lambda3(literal) {
       let value = js_literal_value_get(literal);
+      if (equal(left, right)) {
+      }
     }
     each(nodes, lambda3);
   }
