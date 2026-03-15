@@ -8,10 +8,10 @@ export async function portfolio_qa_login_locked_test() {
   async function lambda(page) {
     const password = portfolio_qa_password_valid();
     const value = "locked_out_user";
-    let r = playwright_by_attribute(page2, name, value2);
     await portfolio_qa_username(page, value);
     await portfolio_qa_password_type(page, password);
     await portfolio_qa_login_click(page);
+    let r = playwright_by_attribute(page2, "data-test", value2);
   }
   await portfolio_qa_test_generic(lambda);
 }
