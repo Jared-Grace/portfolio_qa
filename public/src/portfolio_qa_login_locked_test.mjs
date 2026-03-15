@@ -6,7 +6,7 @@ import { portfolio_qa_test_generic } from "../../../portfolio_qa/public/src/port
 export async function portfolio_qa_login_locked_test() {
   async function lambda(page) {
     const password = portfolio_qa_password_valid();
-    const value = "standard_user";
+    const value = "locked_out_user";
     await portfolio_qa_username(page, value);
     await portfolio_qa_password_type(page, password);
     await portfolio_qa_login_click(page);
