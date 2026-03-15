@@ -1,3 +1,4 @@
+import { equal_not } from "../../../love/public/src/equal_not.mjs";
 import { functions_transform } from "../../../love/public/src/functions_transform.mjs";
 import { each } from "../../../love/public/src/each.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -9,7 +10,7 @@ import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 export async function function_text_replace_all(f_name, text) {
   async function lambda2(ast) {
     let name = js_flo_name(ast);
-    if (equal(name, f_name)) {
+    if (equal_not(name, f_name)) {
       return;
     }
     let nodes = js_list_type_nodes(ast, "Literal");
