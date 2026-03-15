@@ -11,8 +11,6 @@ export async function function_text_replace_all(f_name, text) {
   async function lambda2(ast) {
     let name = js_flo_name(ast);
     if (equal_not(name, f_name)) {
-      return;
-    }
     let nodes = js_list_type_nodes(ast, "Literal");
     function lambda3(literal) {
       let value = js_literal_value_get(literal);
@@ -22,6 +20,7 @@ export async function function_text_replace_all(f_name, text) {
       }
     }
     each(nodes, lambda3);
+    }
   }
   let waited = await functions_transform(lambda2);
 }
