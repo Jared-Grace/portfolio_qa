@@ -1,3 +1,4 @@
+import { js_flo_name } from "../../../love/public/src/js_flo_name.mjs";
 import { js_flo_body_add_return_argument } from "../../../portfolio_qa/public/src/js_flo_body_add_return_argument.mjs";
 import { js_call_empty } from "../../../love/public/src/js_call_empty.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
@@ -15,6 +16,7 @@ export async function function_new_text_replace_all(text, f_name) {
   }
   let output = await function_new_transform(f_name, lambda);
   async function lambda2(ast) {
+    let name = js_flo_name(ast2);
     let nodes = js_list_type_nodes(ast, "Literal");
     function lambda3(literal) {
       let value = js_literal_value_get(literal);
