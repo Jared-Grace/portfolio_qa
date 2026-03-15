@@ -1,3 +1,4 @@
+import { js_call_empty } from "../../../love/public/src/js_call_empty.mjs";
 import { object_replace } from "../../../love/public/src/object_replace.mjs";
 import { equal } from "../../../love/public/src/equal.mjs";
 import { js_literal_value_get } from "../../../love/public/src/js_literal_value_get.mjs";
@@ -20,6 +21,7 @@ export async function function_new_text_replace_all(text, f_name) {
     function lambda3(literal) {
       let value = js_literal_value_get(literal);
       if (equal(value, text)) {
+        let c = js_call_empty(f_name_new);
         object_replace(to, from);
       }
     }
