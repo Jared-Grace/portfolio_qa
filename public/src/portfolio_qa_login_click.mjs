@@ -1,3 +1,4 @@
+import { portfolio_qa_attribute_test_data } from "../../../portfolio_qa/public/src/portfolio_qa_attribute_test_data.mjs";
 import { playwright_by_attribute_click } from "../../../love/public/src/playwright_by_attribute_click.mjs";
 export async function portfolio_qa_login_click(page) {
   const name = portfolio_qa_attribute_test_data();
