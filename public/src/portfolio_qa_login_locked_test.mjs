@@ -11,7 +11,11 @@ export async function portfolio_qa_login_locked_test() {
     await portfolio_qa_username(page, value);
     await portfolio_qa_password_type(page, password);
     await portfolio_qa_login_click(page);
-    let r = playwright_by_attribute_named(page2, "data-test", value2);
+    let r = playwright_by_attribute_named(
+      page2,
+      portfolio_qa_attribute_test_data(),
+      value2,
+    );
   }
   await portfolio_qa_test_generic(lambda);
 }
