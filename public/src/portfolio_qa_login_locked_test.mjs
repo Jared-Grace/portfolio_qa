@@ -1,3 +1,4 @@
+import { portfolio_qa_attribute_test_data } from "../../../portfolio_qa/public/src/portfolio_qa_attribute_test_data.mjs";
 import { playwright_by_attribute_named } from "../../../portfolio_qa/public/src/playwright_by_attribute_named.mjs";
 import { portfolio_qa_username } from "../../../portfolio_qa/public/src/portfolio_qa_username.mjs";
 import { portfolio_qa_login_click } from "../../../portfolio_qa/public/src/portfolio_qa_login_click.mjs";
@@ -11,11 +12,8 @@ export async function portfolio_qa_login_locked_test() {
     await portfolio_qa_username(page, value);
     await portfolio_qa_password_type(page, password);
     await portfolio_qa_login_click(page);
-    let r = playwright_by_attribute_named(
-      page2,
-      portfolio_qa_attribute_test_data(),
-      value2,
-    );
+    let inside = portfolio_qa_attribute_test_data();
+    let r = playwright_by_attribute_named(page, inside);
   }
   await portfolio_qa_test_generic(lambda);
 }
