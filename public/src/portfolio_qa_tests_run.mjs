@@ -23,6 +23,6 @@ export async function portfolio_qa_tests_run() {
   }
   let mapped2 = list_map(mapped, lambda);
   let r2 = await invoke_multiple_unordered_async(mapped2);
-  let r3 = portfolio_qa_tests_run_result(r, errors);
-  return r3;
+  let result = portfolio_qa_tests_run_result(r, errors);
+  return result;
 }
