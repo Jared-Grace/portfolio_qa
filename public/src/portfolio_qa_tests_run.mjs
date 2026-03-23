@@ -7,6 +7,6 @@ export async function portfolio_qa_tests_run() {
   let r = await portfolio_qa_tests();
   let mapped = await list_map_unordered_async(r, function_import);
   let r2 = property_get_curried_right(property_name);
-  let result = await qa_tests_run(mapped);
+  let result = await qa_tests_run(mapped, name_get);
   return result;
 }
