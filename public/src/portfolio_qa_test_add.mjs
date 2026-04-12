@@ -9,12 +9,12 @@ import { function_transform } from "../../../love/public/src/function_transform.
 import { text_combine_multiple } from "../../../love/public/src/text_combine_multiple.mjs";
 import { portfolio_qa_test_suffix } from "../../../portfolio_qa/public/src/portfolio_qa_test_suffix.mjs";
 import { portfolio_qa_test_prefix } from "../../../portfolio_qa/public/src/portfolio_qa_test_prefix.mjs";
-import { function_new } from "../../../love/public/src/function_new.mjs";
+import { function_new_open } from "../../../love/public/src/function_new_open.mjs";
 export async function portfolio_qa_test_add(name_test) {
   let prefix = portfolio_qa_test_prefix();
   let suffix = portfolio_qa_test_suffix();
   let f_name = text_combine_multiple([prefix, name_test, suffix]);
-  await function_new(f_name);
+  await function_new_open(f_name);
   async function lambda(ast) {
     let statement = js_parse_statement(portfolio_qa_test_generic.name);
     js_flo_body_add(ast, statement);
