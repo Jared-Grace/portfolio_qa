@@ -1,5 +1,5 @@
 import { each_async } from "../../../love/public/src/each_async.mjs";
-import { js_imports_missing_add } from "../../../love/public/src/js_imports_missing_add.mjs";
+import { js_imports_missing_add_all } from "../../../love/public/src/js_imports_missing_add_all.mjs";
 import { js_atomize_function } from "../../../love/public/src/js_atomize_function.mjs";
 import { js_call_fill } from "../../../love/public/src/js_call_fill.mjs";
 import { js_flo_body_add } from "../../../love/public/src/js_flo_body_add.mjs";
@@ -21,7 +21,7 @@ export async function portfolio_qa_test_add(name_test) {
     let transforms = [
       js_call_fill,
       js_atomize_function,
-      js_imports_missing_add,
+      js_imports_missing_add_all,
     ];
     async function lambda2(item) {
       await item(ast);
