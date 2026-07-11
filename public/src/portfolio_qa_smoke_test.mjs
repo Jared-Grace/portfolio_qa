@@ -3,7 +3,7 @@ import { portfolio_qa_test_generic } from "../../../portfolio_qa/public/src/port
 export async function portfolio_qa_smoke_test() {
   await portfolio_qa_test_generic(lambda);
   async function lambda(page) {
-    const title = await page.title();
+    let title = await page.title();
     ("this assert is a smoke test");
     equal_assert(title, "Swag Labs");
   }
