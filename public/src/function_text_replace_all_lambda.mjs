@@ -10,13 +10,13 @@ export function function_text_replace_all_lambda(ast, f_name, text) {
   let name = js_flo_name(ast);
   if (equal_not(name, f_name)) {
     let nodes = js_list_type_nodes(ast, "Literal");
-    function lambda3(literal) {
+    function lambda(literal) {
       let value = js_literal_value_get(literal);
       if (equal(value, text)) {
         let c = js_call_empty(f_name);
         object_replace(literal, c);
       }
     }
-    each(nodes, lambda3);
+    each(nodes, lambda);
   }
 }

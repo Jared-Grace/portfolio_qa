@@ -4,7 +4,7 @@ export function playwright_by_attribute_exists_assert_assertion(
   name,
   value,
 ) {
-  function lambda3() {
+  function lambda() {
     let r = {
       exists: e,
       name,
@@ -12,5 +12,5 @@ export function playwright_by_attribute_exists_assert_assertion(
     };
     return r;
   }
-  assert_json_get(e, lambda3);
+  assert_json_get(e, lambda);
 }

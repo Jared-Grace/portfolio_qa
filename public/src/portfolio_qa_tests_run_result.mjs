@@ -17,7 +17,7 @@ export function portfolio_qa_tests_run_result(tests, errors) {
     " ran successfully with no errors",
   ]);
   let message = ternary(count_errors === 0, combined2, combined);
-  let r3 = {
+  let r = {
     errors,
     count: {
       count_total,
@@ -27,5 +27,5 @@ export function portfolio_qa_tests_run_result(tests, errors) {
     errors_names,
     message: message,
   };
-  return r3;
+  return r;
 }
