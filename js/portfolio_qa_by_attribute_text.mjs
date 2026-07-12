@@ -1,0 +1,7 @@
+import { portfolio_qa_attribute_test_data } from "./portfolio_qa_attribute_test_data.mjs";
+import { playwright_by_attribute_text } from "./playwright_by_attribute_text.mjs";
+export async function portfolio_qa_by_attribute_text(page, value) {
+  let name = portfolio_qa_attribute_test_data();
+  let actual = await playwright_by_attribute_text(page, name, value);
+  return actual;
+}

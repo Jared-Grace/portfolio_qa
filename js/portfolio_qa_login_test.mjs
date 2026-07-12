@@ -1,0 +1,14 @@
+import { portfolio_qa_password_valid } from "./portfolio_qa_password_valid.mjs";
+import { portfolio_qa_username_valid_password_login } from "./portfolio_qa_username_valid_password_login.mjs";
+import { portfolio_qa_exists_not_assert } from "./portfolio_qa_exists_not_assert.mjs";
+import { portfolio_qa_exists_assert } from "./portfolio_qa_exists_assert.mjs";
+import { portfolio_qa_test_generic } from "./portfolio_qa_test_generic.mjs";
+export async function portfolio_qa_login_test() {
+  await portfolio_qa_test_generic(lambda);
+  async function lambda(page) {
+    let password = portfolio_qa_password_valid();
+    await portfolio_qa_username_valid_password_login(page, password);
+    await portfolio_qa_exists_not_assert(page, "login-container");
+    await portfolio_qa_exists_assert(page, "inventory-container");
+  }
+}
