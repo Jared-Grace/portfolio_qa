@@ -1,4 +1,4 @@
-import { assert_json_get } from "../../love/js/assert_json_get.mjs";
+import { assert_json } from "../../love/js/assert_json.mjs";
 export function playwright_by_attribute_exists_assert_assertion(
   e,
   name,
