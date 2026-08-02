@@ -1,3 +1,4 @@
+import { equal } from "../../love/js/equal.mjs";
 import { ternary } from "../../love/js/ternary.mjs";
 import { text_combine_multiple } from "../../love/js/text_combine_multiple.mjs";
 import { word_count_pluralize } from "../../love/js/word_count_pluralize.mjs";
@@ -16,7 +17,8 @@ export function portfolio_qa_tests_run_result(tests, errors) {
     v,
     " ran successfully with no errors",
   ]);
-  let message = ternary(count_errors === 0, combined2, combined);
+  let condition = equal(count_errors, 0);
+  let message = ternary(condition, combined2, combined);
   let r = {
     errors,
     count: {
